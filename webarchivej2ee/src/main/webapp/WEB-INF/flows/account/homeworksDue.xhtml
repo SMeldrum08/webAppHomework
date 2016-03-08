@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:p="http://primefaces.org/ui"
+		template="/WEB-INF/templates/generalTeacherAccount.xhtml">
+		
+		
+		<ui:define name="title"><h:outputText value="Check Homeworks Due" /></ui:define>
+		<ui:define name="header"><h:outputText value="Check Homeworks Due" /></ui:define>
+	
+	<ui:define name="content">
+
+		<h1>You can check on the current homeworks that are set here</h1>
+	</ui:define>
+		
+	<ui:define name="sidePanel">
+		<h:form>
+    
+    		<p:panelMenu id="sideMenu">
+        		<p:submenu label="Classes">
+            		<p:menuitem value="My Classes" action="myClasses"/>
+            		<p:menuitem value="Create a new Class" action="createANewClass" />
+        		</p:submenu>
+        		<p:submenu label="Homeworks">
+            		<p:menuitem value="Homeworks Due" action="homeworksDue"/>
+        		</p:submenu>
+        	<p:separator />
+        		<p:submenu label="Worksheets" >
+            		<p:submenu label="Already Made worksheets" >
+                    	<p:menuitem value="Algebra" action="algebraWorksheets" />
+                    	<p:menuitem value="Shape and Space" action="shapeAndSpaceWorksheets" />
+                    	<p:menuitem value="Data" action="dataWorksheets" />
+                    	<p:menuitem value="Ratio and Proportion" action="ratioAndProportionWorksheets" />
+                		<p:menuitem value="Number" action="numberWorksheets"  />
+            		</p:submenu>
+            		<p:menuitem value="Create your own Worksheet" action="createYourOwnWorksheet"/>
+        		</p:submenu>
+        		<p:submenu label="Help">
+        			<p:menuitem value="FAQs" action="faqs"/>
+        			<p:menuitem value="Contact" action="contact" />
+        			<p:menuitem value="Home" action="accountHome" />
+        		</p:submenu>
+    		</p:panelMenu>
+		</h:form>
+	
+	</ui:define>
+</ui:composition>

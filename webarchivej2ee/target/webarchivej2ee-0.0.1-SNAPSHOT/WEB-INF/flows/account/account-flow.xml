@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<secured attributes="ROLE_USER"/>
+	<var name="uiUtils" class="com.example.j2eeapp.ui.utils.UIUtils"/>
+	
+	<on-start>
+		<evaluate expression="userService.loadUserEntityByUsername(currentUser.name)" result="flowScope.user" />
+	</on-start>
+	
+	
+	<view-state id="home" view="accountHome.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="myClasses" view="myClasses.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="createANewClass" view="createANewClass.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="homeworksDue" view="homeworksDue.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="algebraWorksheets" view="algebraWorksheets.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="shapeAndSpaceWorksheets" view="shapeAndSpaceWorksheets.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="dataWorksheets" view="dataWorksheets.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+
+	<view-state id="ratioAndProportionWorksheets" view="ratioAndProportionWorksheets.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="numberWorksheets" view="numberWorksheets.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="createYourOwnWorksheet" view="createYourOwnWorksheet.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="faqs" view="faqs.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+	
+	<view-state id="contact" view="contact.xhtml">
+	 <transition on="myClasses" to="myClasses" />
+	 <transition on="createANewClass" to="createANewClass" />
+	 <transition on="homeworksDue" to="homeworksDue" />
+	 <transition on="algebraWorksheets" to="algebraWorksheets" />
+	 <transition on="shapeAndSpaceWorksheets" to="shapeAndSpaceWorksheets" />
+	 <transition on="dataWorksheets" to="dataWorksheets" />
+	 <transition on="ratioAndProportionWorksheets" to="ratioAndProportionWorksheets" />
+	 <transition on="numberWorksheets" to="numberWorksheets" />
+	 <transition on="createYourOwnWorksheet" to="createYourOwnWorksheet" />
+	 <transition on="faqs" to="faqs" />
+	 <transition on="contact" to="contact" />
+	 <transition on="accountHome" to="home" />
+	</view-state>
+</flow>
