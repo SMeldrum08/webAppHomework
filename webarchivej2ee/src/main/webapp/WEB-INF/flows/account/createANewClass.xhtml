@@ -28,7 +28,7 @@
 						<h:outputText style="color:red" value="*  " />
 				</h:panelGroup>
 				<!-- need to create an entity and link it here in below value -->
-				<p:inputText id="firstName" label="First Name" value="" required="true" title="Enter your First Name!">
+				<p:inputText id="firstName" label="First Name" value="#{student.firstName}" required="true" title="Enter your First Name!">
 					<f:validateLength minimum="2" />
 					<p:ajax event="keyup" update="firstNameMsg" global="false" />
 				</p:inputText>
@@ -41,7 +41,7 @@
 						<h:outputText value="Last Name:" />
 						<h:outputText style="color:red" value="*  " />
 					</h:panelGroup>
-					<p:inputText id="lastName" label="Last Name" value="" required="true" title="Enter your Last Name!">
+					<p:inputText id="lastName" label="Last Name" value="#{student.lastName}" required="true" title="Enter your Last Name!">
 						<f:validateLength minimum="2" />
 						<p:ajax event="keyup" update="lastNameMsg" global="false"/>
 					</p:inputText>
@@ -54,7 +54,7 @@
 						<h:outputText value="Class Name:" />
 						<h:outputText style="color:red" value="*  " />
 					</h:panelGroup>
-					<p:inputText id="className" value="" required="true" label="Class Name" title="Please enter the class name">
+					<p:inputText id="className" value="#{student.className}" required="true" label="Class Name" title="Please enter the class name">
 						<f:validateLength minimum="2" />
 						<p:ajax event="keyup" update="userNameMsg" global="false" />
 					</p:inputText>

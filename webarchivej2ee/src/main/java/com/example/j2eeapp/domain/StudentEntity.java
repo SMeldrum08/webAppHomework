@@ -47,8 +47,8 @@ public class StudentEntity extends BaseEntity{
 	public String getUserName() {
 		return userName;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName() {
+		this.userName = getFirstName() + getLastName();
 	}
 	public String getPassword() {
 		return password;
@@ -63,7 +63,7 @@ public class StudentEntity extends BaseEntity{
 		return creatorName;
 	}
 	public void setCreatorName(String creatorName) {
-		this.creatorName = creatorName;
+		this.creatorName = "temporary";
 	}
 	
 
