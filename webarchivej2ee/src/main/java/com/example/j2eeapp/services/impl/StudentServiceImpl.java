@@ -16,14 +16,18 @@ public class StudentServiceImpl implements StudentService {
 //			return false;
 //		}
 //		
-//		try {
-//			studentDao.save(studentEntity);
-//		} catch(Exception e) {
-//	
-//			
-//			return false;
-//		}
-		return false;
+		try {
+			studentEntity.setUserName();
+			studentEntity.setPassword();
+			studentEntity.setCreatorName("temp");
+			studentDao.save(studentEntity);
+			return true;
+		} catch(Exception e) {
+	
+			
+			return false;
+		}
+		
 	}
 
 	public StudentDao getStudentDao() {
