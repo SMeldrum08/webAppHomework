@@ -14,9 +14,11 @@ create table appstudent (
 	firstName varchar2(30),
 	lastName varchar2(30),
 	className varchar2(40),
-	userName varchar2(30) UNIQUE,
+	userName varchar2(30),
 	password varchar2(10),
 	creatorName varchar2(30),
-	constraint appstudent_pk primary key (id)
-	
+	constraint appstudent_pk primary key (id),
+	constraint appstudent_userName_uk unique (userName)
 );
+
+DROP TABLE appstudent PURGE; 

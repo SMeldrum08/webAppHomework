@@ -8,26 +8,32 @@ import com.example.j2eeapp.services.StudentService;
 public class StudentServiceImpl implements StudentService {
 	
 	private StudentDao studentDao;
+	
 
 	public boolean createStudent(StudentEntity studentEntity) {
-//		if(!studentDao.checkAvailable(studentEntity.getUserName())){
-//
-//			
-//			return false;
-//		}
-//		
-		try {
-			studentEntity.setUserName();
-			studentEntity.setPassword();
-			studentEntity.setCreatorName("temp");
-			studentDao.save(studentEntity);
-			return true;
-		} catch(Exception e) {
+
+		int check = 0;
+		int n = 1;
+		studentEntity.setPassword();
+		studentEntity.setCreatorName("temp");
 	
-			
-			return false;
+		while(check != 1){
+			studentEntity.setUserName(n);
+			if(studentDao.checkAvailable(studentEntity.getUserName())){
+				studentDao.save(studentEntity);
+				return true;
+			}
+			else{
+				n++;
+				if(n > 100){
+					return false;
+				}
+				
+			}
 		}
+		return false;
 		
+
 	}
 
 	public StudentDao getStudentDao() {

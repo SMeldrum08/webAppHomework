@@ -47,8 +47,8 @@ public class StudentEntity extends BaseEntity{
 	public String getUserName() {
 		return userName;
 	}
-	public void setUserName() {
-		this.userName = getFirstName() + getLastName();
+	public void setUserName(int n) {
+		this.userName = getFirstName() + getLastName() + n;
 	}
 	public String getPassword() {
 		return password;
