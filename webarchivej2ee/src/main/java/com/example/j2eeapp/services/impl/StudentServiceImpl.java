@@ -10,12 +10,12 @@ public class StudentServiceImpl implements StudentService {
 	private StudentDao studentDao;
 	
 
-	public boolean createStudent(StudentEntity studentEntity) {
+	public boolean createStudent(StudentEntity studentEntity, String teacherName) {
 
 		int check = 0;
 		int n = 1;
 		studentEntity.setPassword();
-		studentEntity.setCreatorName("temp");
+		studentEntity.setCreatorName(teacherName);
 	
 		while(check != 1){
 			studentEntity.setUserName(n);

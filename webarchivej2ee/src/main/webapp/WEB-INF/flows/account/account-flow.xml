@@ -46,7 +46,7 @@
 	
 	<view-state id="createANewClass" view="createANewClass.xhtml">
 	 <transition on="confirmCreateStudent" to="home">
-	 	<evaluate expression="studentService.createStudent(student)"/>
+	 	<evaluate expression="studentService.createStudent(student, currentUser.name)"/>
 	 </transition>
 	 <transition on="myClasses" to="myClasses" />
 	 <transition on="createANewClass" to="createANewClass" />

@@ -17,7 +17,7 @@ public interface StudentService {
  * 
  */
 	
-	boolean createStudent(StudentEntity studentEntity);
+	boolean createStudent(StudentEntity studentEntity, String teacherName);
 	
 	
 	//boolean checkAvailable(AjaxBehaviorEvent event);

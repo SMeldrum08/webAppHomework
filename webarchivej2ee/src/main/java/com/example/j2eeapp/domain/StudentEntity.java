@@ -63,7 +63,7 @@ public class StudentEntity extends BaseEntity{
 		return creatorName;
 	}
 	public void setCreatorName(String creatorName) {
-		this.creatorName = "temporary";
+		this.creatorName = creatorName;
 	}
 	
 
