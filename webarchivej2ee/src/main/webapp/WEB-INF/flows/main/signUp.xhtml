@@ -81,5 +81,21 @@
 		</p:fieldset>
 	</h:form>
 	</ui:define>
+	
+	<ui:define name="sidePanel">
+		<h:form>
+    
+    		<p:panelMenu id="sideMenu">
+        		<p:submenu label="Log in pages">
+            		<p:menuitem value="Log in as teacher" action="teacherSignIn" />
+            		<p:menuitem value="Log in as student" action="studentSignIn" />
+            		<p:menuitem value="Home" action="home" />
+            	</p:submenu>
+            	<p:submenu label="Create an account" >
+            		<p:menuitem value="Create a teacher account" action="signUp"/>
+            	</p:submenu>
+            </p:panelMenu>
+        </h:form>
+    </ui:define>
 		
 </ui:composition>

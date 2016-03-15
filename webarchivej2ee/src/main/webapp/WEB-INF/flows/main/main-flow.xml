@@ -7,10 +7,11 @@
         <var name="user" class="com.example.j2eeapp.domain.UserEntity"/>
 
 	<view-state id="welcome" view="welcome.xhtml" >
-		<transition on="newUser" to="signUp" />
-		<transition on="confirmSignIn" to="finish">
-			<evaluate expression="userAuthenticationProviderService.processUserAuthentication(user)" />
-		</transition>
+
+		<transition on="home" to="welcome" />
+		<transition on="signUp" to="signUp" />
+		<transition on="teacherSignIn" to="teacherSignIn" />
+		<transition on="studentSignIn" to="studentSignIn" />
 	</view-state>
 	
 	<view-state id="signUp" view="signUp.xhtml" model="user">
@@ -18,6 +19,33 @@
 		<transition on="confirmSignUp" to="authenticate">
 			<evaluate expression="userService.createUser(user)"/>		
 		</transition>
+		
+		<transition on="home" to="welcome" />
+		<transition on="signUp" to="signUp" />
+		<transition on="teacherSignIn" to="teacherSignIn" />
+		<transition on="studentSignIn" to="studentSignIn" />
+	</view-state>
+	
+	<view-state id="teacherSignIn" view="teacherSignIn.xhtml">
+		<transition on="newUser" to="signUp" />
+		<transition on="confirmSignIn" to="finish">
+			<evaluate expression="userAuthenticationProviderService.processUserAuthentication(user)" />
+		</transition>
+		
+		<transition on="home" to="welcome" />
+		<transition on="signUp" to="signUp" />
+		<transition on="teacherSignIn" to="teacherSignIn" />
+		<transition on="studentSignIn" to="studentSignIn" />
+	
+	</view-state>
+	
+	<view-state id="studentSignIn" view="studentSignIn.xhtml">
+	
+		<transition on="home" to="welcome" />
+		<transition on="signUp" to="signUp" />
+		<transition on="teacherSignIn" to="teacherSignIn" />
+		<transition on="studentSignIn" to="studentSignIn" />
+	
 	</view-state>
 	
 	<action-state id="authenticate">

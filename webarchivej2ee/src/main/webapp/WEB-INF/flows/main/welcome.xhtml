@@ -14,38 +14,23 @@
 	<ui:define name="header"><h:outputText value="Please sign in" /></ui:define>
 	
 	<ui:define name="content">
-	<h:form id="loginForm" >
-		<p:fieldset styleClass="fieldset" legend="Authentication Form">
-			<p:focus />
-			<p:messages id="messages" globalOnly="true" />
-		
-			<h:panelGrid id="logPanelGrid" style="margin:0 auto; margin-top:25px; text-align: right" cellspacing="8" columns="3">
-				<h:panelGroup>
-					<h:outputText value="User Name:" />
-					<h:outputText style="color:red" value="*   " />
-				</h:panelGroup>
-				<p:inputText id="username" value="#{user.userName}" required="true" label="User Name" title="Enter your user name" />
-				
-				<h:panelGroup>
-				<p:message id="usernameMsg" for="username"  />
-				<p:tooltip for="username" styleclass="tooltip" showEvent="focus" hideEvent="blur" />
-				</h:panelGroup>
-				
-				<h:panelGroup>
-					<h:outputText value="Enter Password:" />
-					<h:outputText style="color:red" value="*   " />
-				</h:panelGroup>
-				<p:inputText id="pass" value="#{user.password}" required="true" label="Password" title="Please enter a password" />
-				<h:panelGroup>
-				<h:message id="passwordMsg" for="pass" />
-				<p:tooltip for="pass" styleclass="tooltip" showEvent="focus" hideEvent="blur" />
-				</h:panelGroup>
-				
-				<p:commandButton id="submitButton" action="confirmSignIn" update="logPanelGrid,messages" icon="ui-icon-check" value="Sign In" />
-				<p:commandButton id="newUserButton" action="newUser" immediate="true" icon="ui-icon-plus" value="Sign Up" />
-			</h:panelGrid>
-		</p:fieldset>
-	</h:form>
+		<h1> Welcome </h1>
 	</ui:define>
+	
+	<ui:define name="sidePanel">
+		<h:form>
+    
+    		<p:panelMenu id="sideMenu">
+        		<p:submenu label="Log in pages">
+            		<p:menuitem value="Log in as teacher" action="teacherSignIn" />
+            		<p:menuitem value="Log in as student" action="studentSignIn" />
+            		<p:menuitem value="Home" action="home" />
+            	</p:submenu>
+            	<p:submenu label="Create an account" >
+            		<p:menuitem value="Create a teacher account" action="signUp"/>
+            	</p:submenu>
+            </p:panelMenu>
+        </h:form>
+    </ui:define>
 		
 </ui:composition>
