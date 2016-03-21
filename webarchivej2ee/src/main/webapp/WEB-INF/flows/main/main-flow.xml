@@ -5,6 +5,7 @@
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
         
         <var name="user" class="com.example.j2eeapp.domain.UserEntity"/>
+        <var name="student" class="com.example.j2eeapp.domain.StudentEntity"/>
 
 	<view-state id="welcome" view="welcome.xhtml" >
 
@@ -40,6 +41,10 @@
 	</view-state>
 	
 	<view-state id="studentSignIn" view="studentSignIn.xhtml">
+	
+		<transition on="confirmSignIn2" to="finish" >
+			<evaluate expression="studentAuthenticationProviderService.processStudentAuthentication(student)" />
+		</transition>
 	
 		<transition on="home" to="welcome" />
 		<transition on="signUp" to="signUp" />

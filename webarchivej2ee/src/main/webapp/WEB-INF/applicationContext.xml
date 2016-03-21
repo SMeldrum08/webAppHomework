@@ -31,5 +31,9 @@
 		<property name="authenticationManager" ref="authenticationManager" />
 	</bean>
 	
+	<bean id="studentAuthenticationProviderService" 
+					class="com.example.j2eeapp.services.impl.StudentAuthenticationProviderServiceImpl" >
+		<property name="authenticationManager2" ref="authenticationManager2" />
+	</bean>
 	
 </beans>

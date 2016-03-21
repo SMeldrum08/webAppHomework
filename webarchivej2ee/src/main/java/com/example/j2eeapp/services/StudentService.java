@@ -24,6 +24,6 @@ public interface StudentService {
 	
 	
 	
-	//UserEntity loadUserEntityByUsername(String userName);
+	StudentEntity loadUserEntityByUsername(String userName);
 }
 

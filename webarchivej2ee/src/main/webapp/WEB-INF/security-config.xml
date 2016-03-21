@@ -24,10 +24,22 @@
 		<property name="hideUserNotFoundExceptions" value="false" />
 	</bean>
 	
+	<bean id="daoAuthenticationProvider2" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="studentService" />
+		<property name="hideUserNotFoundExceptions" value="false" />
+	</bean>
+	
 	<bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
 		<constructor-arg>
 			<ref local="daoAuthenticationProvider" />
 		</constructor-arg>
 	</bean>
+	
+		<bean id="authenticationManager2" class="org.springframework.security.authentication.ProviderManager">
+		<constructor-arg>
+			<ref local="daoAuthenticationProvider2" />
+		</constructor-arg>
+	</bean>
+	   		
 	   		
 </beans>

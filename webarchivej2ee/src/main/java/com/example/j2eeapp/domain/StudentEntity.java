@@ -50,6 +50,9 @@ public class StudentEntity extends BaseEntity{
 	public void setUserName(int n) {
 		this.userName = getFirstName() + getLastName() + n;
 	}
+	public void setUserName(String username){
+		this.userName = username;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -59,6 +62,10 @@ public class StudentEntity extends BaseEntity{
 		};
 		this.password = passwordArray[(int )(Math.random()*5)];
 	}
+	public void setPassword(String password){
+		this.password = password;
+	}
+	
 	public String getCreatorName() {
 		return creatorName;
 	}
