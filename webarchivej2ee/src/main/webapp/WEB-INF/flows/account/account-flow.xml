@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-	<secured attributes="ROLE_USER"/>
+	<secured attributes="ROLE_ADMIN"/>
 	<var name="uiUtils" class="com.example.j2eeapp.ui.utils.UIUtils"/>
 	
 	<var name="student" class="com.example.j2eeapp.domain.StudentEntity"/>

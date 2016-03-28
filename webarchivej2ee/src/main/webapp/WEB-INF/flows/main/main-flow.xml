@@ -42,7 +42,7 @@
 	
 	<view-state id="studentSignIn" view="studentSignIn.xhtml">
 	
-		<transition on="confirmSignIn2" to="finish" >
+		<transition on="confirmSignIn2" to="finishStudent" >
 			<evaluate expression="studentAuthenticationProviderService.processStudentAuthentication(student)" />
 		</transition>
 	
@@ -60,6 +60,6 @@
 	</action-state>
 	
 	<end-state id="finish" view="externalRedirect:account"/>
-	
+	<end-state id="finishStudent" view="externalRedirect:studentAccount"/>
 	
 </flow>

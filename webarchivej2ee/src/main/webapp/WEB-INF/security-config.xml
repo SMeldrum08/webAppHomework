@@ -10,6 +10,7 @@
 	   		
 	<security:http auto-config="true">
 		<security:form-login login-page="/app/main" default-target-url="/app/account" />
+		<security:form-login login-page="/app/main" default-target-url="/app/studentAccount" />
 		<security:logout logout-url="/app/logout" logout-success-url="/app/main" />
 	</security:http>
 	
