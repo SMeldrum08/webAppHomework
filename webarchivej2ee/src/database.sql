@@ -22,3 +22,13 @@ create table appstudent (
 );
 
 DROP TABLE appstudent PURGE; 
+
+create table apphomeworkcreation (
+	id number, 
+	teacherId number,
+	classId varchar2(30),
+	homework varchar2(40),
+	dateSet date,
+	dateDue date,
+	constraint apphomeworkcreation_pk primary key (id)
+);
